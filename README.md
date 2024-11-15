@@ -43,3 +43,13 @@ Refactoring and organization
 - Created images folder and moved all images into it
 - Created new Component ProductList
 
+
+## Shop Page 6 / Step 6
+### Summary
+more Refactoring
+
+### Notes
+- Created Header component
+- Created Home component
+- Moved everything into home
+- Cleaned up App.js
