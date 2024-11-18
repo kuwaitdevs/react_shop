@@ -46,10 +46,23 @@ Refactoring and organization
 
 ## Shop Page 6 / Step 6
 ### Summary
-more Refactoring
+More Refactoring
 
 ### Notes
 - Created Header component
 - Created Home component
 - Moved everything into home
 - Cleaned up App.js
+
+
+## React Filtering Pets
+### Summary
+Added pets page and made some changes
+
+### Notes
+- Created PetsList
+- Created PetsHome
+- Created PetsItem
+- fixed class to className in PetItem
+- Added adopt props
+- Added filterPets function

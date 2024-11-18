@@ -1,15 +1,32 @@
-import React from 'react'
-import products_data from '../products_data';
-import ProductList from './ProductList';
-import Header from './Header';
+import React, { useState } from 'react'
+import StoreHome from './StoreHome';
+import PetsHome from './PetsHome';
 
 function Home() {
+    const [showHome, setShowHome] = useState(false);
+    const [showPetsHome, setShowPetsHome] = useState(false);
+
+    const toggleHome = () => {
+        setShowHome(!showHome);
+    }
+
+    const togglePetsHome = () => {
+        setShowPetsHome(!showPetsHome);
+    }
+
     return (
-        <div className='text-center'>
-            <Header />
-            <div className='row'>
-                <ProductList productsData={products_data}></ProductList>
+        <div>
+            <div style={{ margin: '20px' }}>
+                <button style={{ marginRight: '20px' }} onClick={() => { toggleHome(); }}>
+                    Show Store Home
+                </button>
+                <button onClick={() => { togglePetsHome(); }}>
+                    Show Pets Home
+                </button>
             </div>
+
+            {showHome && <StoreHome />}
+            {showPetsHome && <PetsHome />}
         </div>
     )
 }
